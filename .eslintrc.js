@@ -9,7 +9,7 @@ module.exports = {
     react: {
       pragma: 'React',
       version: 'detect',
-    }
+    },
   },
   extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:react-hooks/recommended'],
   globals: {
