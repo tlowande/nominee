@@ -1,10 +1,11 @@
 import React from 'react'
+import Search from './components/search'
+
 
 const App = () =>  {
+
   return (
-    <h1>
-      Nominee
-    </h1>
+    <Search/>
   )
 }
 

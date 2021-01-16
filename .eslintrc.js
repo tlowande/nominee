@@ -11,7 +11,7 @@ module.exports = {
       version: 'detect',
     },
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:react-hooks/recommended'],
+  extends: [ 'plugin:react/recommended', 'plugin:react-hooks/recommended'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
