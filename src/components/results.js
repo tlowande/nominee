@@ -45,7 +45,7 @@ const Results = ({ results, term }) => {
   }
 
   useEffect(() => {
-    isDone && toast(message)
+    isDone && toast.success(message)
   })
 
   return(
@@ -113,7 +113,7 @@ const Results = ({ results, term }) => {
 }
 
 Results.propTypes = {
-  results: PropTypes.arr,
+  results: PropTypes.array,
   term: PropTypes.string,
 }
 
