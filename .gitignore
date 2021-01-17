@@ -1,8 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# files
-copyREADME.md
-
 # dependencies
 /node_modules
 /.pnp
@@ -22,6 +19,8 @@ copyREADME.md
 .env.test.local
 .env.production.local
 .eslintcache
+copyREADME.md
+
 
 npm-debug.log*
 yarn-debug.log*
