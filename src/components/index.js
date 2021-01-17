@@ -50,7 +50,7 @@ const Nominees = (props) => {
     >
       <Grid item sm={12}>
         <Typography variant='h4' gutterBottom color='textSecondary'>
-        The Shoppies
+        The Shoppies Nomination
         </Typography>
       </Grid>
       <Search {...{ setTerm }}/>

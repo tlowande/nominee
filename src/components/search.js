@@ -26,6 +26,7 @@ const Search = ({ setTerm }) => {
         className={`${classes.root}`}
         noValidate
         autoComplete="off"
+        onSubmit={e => { e.preventDefault() }}
       >
         <TextField
           id="movie-search"
