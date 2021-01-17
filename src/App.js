@@ -1,11 +1,10 @@
 import React from 'react'
-import Search from './components/search'
+import Nominees from './components'
 
 
 const App = () =>  {
-
   return (
-    <Search/>
+    <Nominees />
   )
 }
 
