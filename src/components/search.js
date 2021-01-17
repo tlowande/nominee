@@ -1,7 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
-import { makeStyles } from '@material-ui/core/styles'
+import {
+  makeStyles,
+  ThemeProvider,
+  createMuiTheme,
+} from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
 import Grid from '@material-ui/core/Grid'
 import SearchIcon from '@material-ui/icons/Search'
@@ -9,16 +13,20 @@ import SearchIcon from '@material-ui/icons/Search'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    '& > *': { width: '100%', color: '#002e25', '&$focused': { color: '#002e25' } },
+    '& > *': { width: '100%', color: '#002e25' },
   },
   form: { alignSelf: 'center', width: '100%' },
-  formLabel: { color: '#002e25', '&$focused': { color: '#002e25' } },
   input: { backgroundColor: '#fbf7ed' },
 }))
 
+const theme = createMuiTheme({
+  palette: {
+    primary: { main: '#002e25' },
+  },
+})
+
 const Search = ({ setTerm }) => {
   const classes = useStyles()
-
 
   return(
     <Grid item sm={9} className={classes.form}>
@@ -26,24 +34,21 @@ const Search = ({ setTerm }) => {
         className={`${classes.root}`}
         noValidate
         autoComplete="off"
+        onSubmit={e => { e.preventDefault() }}
       >
-        <TextField
-          id="movie-search"
-          label="Movie Search"
-          variant="outlined"
-          color="primary"
-          InputProps={{
-            endAdornment: <SearchIcon />,
-            className: classes.input,
-          }}
-          InputLabelProps={{
-            classes: {
-              focused: classes.formLabel,
-            },
-          }}
-          onChange={({ target: { value } }) => setTerm(value)}
-
-        />
+        <ThemeProvider theme={theme}>
+          <TextField
+            id="movie-search"
+            label="Movie Search"
+            variant="outlined"
+            color="primary"
+            InputProps={{
+              endAdornment: <SearchIcon />,
+              className: classes.input,
+            }}
+            onChange={({ target: { value } }) => setTerm(value)}
+          />
+        </ThemeProvider>
       </form>
     </Grid>
   )

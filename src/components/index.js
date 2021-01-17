@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDebounce } from 'use-debounce'
 
-
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
@@ -50,7 +49,7 @@ const Nominees = (props) => {
     >
       <Grid item sm={12}>
         <Typography variant='h4' gutterBottom color='textSecondary'>
-        The Shoppies
+        The Shoppies Nomination
         </Typography>
       </Grid>
       <Search {...{ setTerm }}/>
