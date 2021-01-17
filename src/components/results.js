@@ -46,7 +46,7 @@ const Results = ({ results, term }) => {
 
   useEffect(() => {
     isDone && toast.success(message)
-  })
+  },[isDone])
 
   return(
     <Grid container item justify='center'>
